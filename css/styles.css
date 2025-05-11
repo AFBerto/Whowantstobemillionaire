@@ -30,7 +30,7 @@ body {
 }
 
 .logo-big {
-    max-width: 80%; /* Tamaño original para logobig.png */
+    max-width: 53%; /* Reducido a 2/3 de 80% (53.33% redondeado) */
     height: auto;
     margin-bottom: 30px;
 }
@@ -43,7 +43,7 @@ body {
 }
 
 .play-button img {
-    max-width: 400px; /* Doble del tamaño base (200px -> 400px) para jugar.png */
+    max-width: 400px; /* Tamaño grande para jugar.png */
     height: auto;
     animation: blink 1.5s ease-in-out infinite; /* Animación de parpadeo */
 }
@@ -249,6 +249,6 @@ body {
     }
 
     .logo-big {
-        max-width: 90%; /* Ajuste para pantallas pequeñas */
+        max-width: 60%; /* Reducido a 2/3 de 90% (60%) */
     }
 }
