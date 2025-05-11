@@ -43,12 +43,25 @@ body {
 }
 
 .play-button img {
-    max-width: 200px;
+    max-width: 400px; /* Doble del tamaño original (200px -> 400px) */
     height: auto;
+    animation: blink 1.5s ease-in-out infinite; /* Animación de parpadeo */
 }
 
 .play-button:hover {
     transform: scale(1.1);
+}
+
+/* Animación de parpadeo */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.05);
+    }
 }
 
 /* Pantalla principal */
@@ -229,5 +242,9 @@ body {
 
     .lifeline-button img {
         width: 50px;
+    }
+
+    .play-button img {
+        max-width: 300px; /* Ajustar tamaño en pantallas pequeñas */
     }
 }
