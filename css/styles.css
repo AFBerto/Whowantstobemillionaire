@@ -30,7 +30,7 @@ body {
 }
 
 .logo-big {
-    max-width: 32%; /* Reducido un 40% desde 53% (53% * 0.6 ≈ 32%) */
+    max-width: 53%; /* Reducido a 2/3 de 80% (53.33% redondeado) */
     height: auto;
     margin-bottom: 30px;
 }
@@ -93,7 +93,7 @@ body {
 
 .progress-buttons {
     display: flex;
-    flex-direction: column; /* Cambiado a column para orden natural (1M arriba, 500 abajo) */
+    flex-direction: column-reverse; /* Ordena de abajo hacia arriba */
     align-items: center;
     gap: 10px;
 }
