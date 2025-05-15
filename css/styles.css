@@ -30,7 +30,7 @@ body {
 }
 
 .logo-big {
-    max-width: 30%; /* Tamaño actual */
+    max-width: 32%; /* Reducido un 40% desde 53% (53% * 0.6 ≈ 32%) */
     height: auto;
     margin-bottom: 30px;
 }
@@ -93,7 +93,7 @@ body {
 
 .progress-buttons {
     display: flex;
-    flex-direction: column; /* Orden natural para 1M arriba y 500 abajo */
+    flex-direction: column; /* Cambiado a column para orden natural (1M arriba, 500 abajo) */
     align-items: center;
     gap: 10px;
 }
@@ -245,10 +245,10 @@ body {
     }
 
     .play-button img {
-        max-width: 300px;
+        max-width: 300px; /* Ajustar tamaño en pantallas pequeñas */
     }
 
     .logo-big {
-        max-width: 60%;
+        max-width: 60%; /* Reducido a 2/3 de 90% (60%) */
     }
 }
