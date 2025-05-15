@@ -12,7 +12,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #2c5dc5; /* Fallback color */
+    background-color: #2c5dc5; /* Color de respaldo */
 }
 
 /* Pantalla inicial */
@@ -30,7 +30,7 @@ body {
 }
 
 .logo-big {
-    max-width: 53%; /* Reducido a 2/3 de 80% (53.33% redondeado) */
+    max-width: 31.8%; /* Reducido un 40% desde 53% (53 * 0.6) */
     height: auto;
     margin-bottom: 30px;
 }
@@ -249,6 +249,6 @@ body {
     }
 
     .logo-big {
-        max-width: 60%; /* Reducido a 2/3 de 90% (60%) */
+        max-width: 36%; /* Reducido un 40% desde 60% (60 * 0.6) */
     }
 }
