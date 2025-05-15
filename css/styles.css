@@ -27,61 +27,12 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative;
-}
-
-/* Destellos radiales */
-.radial-flare {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 0;
-    overflow: hidden;
-    display: block;
-}
-
-.radial-flare::before,
-.radial-flare::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: flare-rotate 6s linear infinite;
-    opacity: 0.5;
-}
-
-.radial-flare::after {
-    animation-delay: -3s;
-}
-
-/* Animación de rotación para los destellos */
-@keyframes flare-rotate {
-    0% {
-        transform: translate(-50%, -50%) rotate(0deg) scale(1);
-        opacity: 0.5;
-    }
-    50% {
-        opacity: 0.2;
-    }
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg) scale(1.2);
-        opacity: 0.5;
-    }
 }
 
 .logo-big {
-    max-width: 30%;
+    max-width: 30%; /* Tamaño actual */
     height: auto;
     margin-bottom: 30px;
-    position: relative;
-    z-index: 1;
 }
 
 .play-button {
@@ -89,14 +40,12 @@ body {
     border: none;
     cursor: pointer;
     transition: transform 0.2s;
-    position: relative;
-    z-index: 1;
 }
 
 .play-button img {
-    max-width: 400px;
+    max-width: 400px; /* Tamaño grande para jugar.png */
     height: auto;
-    animation: blink 1.5s ease-in-out infinite;
+    animation: blink 1.5s ease-in-out infinite; /* Animación de parpadeo */
 }
 
 .play-button:hover {
@@ -144,7 +93,7 @@ body {
 
 .progress-buttons {
     display: flex;
-    flex-direction: column; /* Cambiado de column-reverse a column para orden natural */
+    flex-direction: column; /* Orden natural para 1M arriba y 500 abajo */
     align-items: center;
     gap: 10px;
 }
@@ -301,10 +250,5 @@ body {
 
     .logo-big {
         max-width: 60%;
-    }
-
-    .radial-flare::before,
-    .radial-flare::after {
-        background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 60%);
     }
 }
