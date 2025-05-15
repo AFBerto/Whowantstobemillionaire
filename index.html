@@ -3,48 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Quién quiere ser millonario? - Física</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>¿Quién Quiere Ser Millonario?</title>
+    <link rel="stylesheet" href="styles.css">
     <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 </head>
 <body>
     <!-- Pantalla inicial -->
-    <div id="startScreen" class="start-screen">
-        <img src="images/logobig.png" alt="Logo Grande" class="logo-big">
+    <section id="startScreen" class="start-screen">
+        <img src="images/start.png" alt="Logo" class="logo-big">
         <button id="playButton" class="play-button">
             <img src="images/jugar.png" alt="Jugar">
         </button>
-    </div>
+        <p class="website-url">www.aprendiendofisicaconbertotomas.com</p>
+    </section>
 
-    <!-- Pantalla principal del juego -->
-    <div id="gameScreen" class="container" style="display: none;">
+    <!-- Pantalla principal -->
+    <section id="gameScreen" class="container" style="display: none;">
         <!-- Panel izquierdo: Progresión de premios -->
         <div class="progress-panel">
             <img src="images/logo.png" alt="Logo" class="logo">
             <div class="progress-buttons">
-                <img src="images/1M.png" alt="1M" id="level-1M" class="progress-button">
-                <img src="images/500k.png" alt="500k" id="level-500k" class="progress-button">
-                <img src="images/250k.png" alt="250k" id="level-250k" class="progress-button">
-                <img src="images/150k.png" alt="150k" id="level-150k" class="progress-button">
-                <img src="images/75k.png" alt="75k" id="level-75k" class="progress-button">
-                <img src="images/50k.png" alt="50k" id="level-50k" class="progress-button">
-                <img src="images/20k.png" alt="20k" id="level-20k" class="progress-button">
-                <img src="images/10k.png" alt="10k" id="level-10k" class="progress-button">
-                <img src="images/5k.png" alt="5k" id="level-5k" class="progress-button">
-                <img src="images/2k.png" alt="2k" id="level-2k" class="progress-button">
-                <img src="images/1k.png" alt="1k" id="level-1k" class="progress-button">
-                <img src="images/500.png" alt="500" id="level-500" class="progress-button">
+                <img src="images/500.png" alt="500" class="progress-button" id="level-500">
+                <img src="images/1k.png" alt="1k" class="progress-button" id="level-1k">
+                <img src="images/2k.png" alt="2k" class="progress-button" id="level-2k">
+                <img src="images/5k.png" alt="5k" class="progress-button" id="level-5k">
+                <img src="images/10k.png" alt="10k" class="progress-button" id="level-10k">
+                <img src="images/20k.png" alt="20k" class="progress-button" id="level-20k">
+                <img src="images/50k.png" alt="50k" class="progress-button" id="level-50k">
+                <img src="images/75k.png" alt="75k" class="progress-button" id="level-75k">
+                <img src="images/150k.png" alt="150k" class="progress-button" id="level-150k">
+                <img src="images/250k.png" alt="250k" class="progress-button" id="level-250k">
+                <img src="images/500k.png" alt="500k" class="progress-button" id="level-500k">
+                <img src="images/1M.png" alt="1M" class="progress-button" id="level-1M">
             </div>
         </div>
 
-        <!-- Panel derecho: Pregunta, opciones y comodines -->
+        <!-- Panel derecho: Pregunta y comodines -->
         <div class="game-panel">
             <div class="question-container">
-                <img src="images/card.png" alt="Card" class="card-bg">
+                <img src="images/card.png" alt="Card Background" class="card-bg">
                 <div class="question-content">
-                    <p id="question-text">Esperando pregunta...</p>
+                    <div id="question-text">Esperando pregunta...</div>
                     <div class="options">
                         <button class="option-button" id="option-0">Opción A</button>
                         <button class="option-button" id="option-1">Opción B</button>
@@ -54,13 +55,18 @@
                 </div>
             </div>
             <div class="lifelines">
-                <button class="lifeline-button" id="fifty-fifty"><img src="images/50.png" alt="50%"></button>
-                <button class="lifeline-button" id="audience"><img src="images/people.png" alt="Público"></button>
+                <button class="lifeline-button" id="fifty-fifty">
+                    <img src="images/50-50.png" alt="50:50">
+                </button>
+                <button class="lifeline-button" id="audience">
+                    <img src="images/audience.png" alt="Audience">
+                </button>
             </div>
-            <p id="feedback"></p>
+            <div id="feedback"></div>
         </div>
-    </div>
-    <script src="js/scripts.js"></script>
+    </section>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
 
