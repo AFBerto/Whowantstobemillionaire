@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+SemiCondensed:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap');
 
 * {
     margin: 0;
@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: 'Barlow SemiCondensed', sans-serif;
+    font-family: 'Nunito', sans-serif;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -23,7 +23,7 @@ body {
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-image: url('../images/bg.png');
+    background-image: url('images/bg.png'); /* Ajustado a ruta relativa */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -55,7 +55,7 @@ body {
 .web-link {
     margin-top: 20px;
     font-size: 18px;
-    font-weight: 500; /* Barlow SemiCondensed Medium */
+    font-weight: 700;
     color: #ffeb3b; /* Color amarillo que combina con el feedback */
     text-decoration: none;
     transition: color 0.2s;
@@ -83,7 +83,7 @@ body {
     width: 100%;
     max-width: 1200px;
     height: 100vh;
-    background-image: url('../images/bg1.png');
+    background-image: url('images/bg1.png'); /* Ajustado a ruta relativa */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -155,7 +155,7 @@ body {
 
 #question-text {
     font-size: 24px;
-    font-weight: 500; /* Barlow SemiCondensed Medium */
+    font-weight: 700;
     color: #fff;
     margin-bottom: 20px;
 }
@@ -172,7 +172,7 @@ body {
     border-radius: 5px;
     padding: 10px;
     font-size: 18px;
-    font-weight: 500; /* Barlow SemiCondensed Medium */
+    font-weight: 700;
     color: #2c5dc5;
     cursor: pointer;
     transition: background-color 0.2s;
@@ -196,7 +196,7 @@ body {
 .lifeline-button {
     background: none;
     border: none;
-   block cursor: pointer;
+    cursor: pointer;
     transition: transform 0.2s;
 }
 
@@ -215,7 +215,7 @@ body {
 
 #feedback {
     font-size: 20px;
-    font-weight: 500; /* Barlow SemiCondensed Medium */
+    font-weight: 700;
     color: #ffeb3b;
     margin-top: 20px;
 }
@@ -246,12 +246,10 @@ body {
 
     #question-text {
         font-size: 20px;
-        font-weight: 500; /* Barlow SemiCondensed Medium */
     }
 
     .option-button {
         font-size: 16px;
-        font-weight: 500; /* Barlow SemiCondensed Medium */
         padding: 8px;
     }
 
@@ -269,7 +267,6 @@ body {
 
     .web-link {
         font-size: 16px;
-        font-weight: 500; /* Barlow SemiCondensed Medium */
         margin-top: 20px;
     }
 }
