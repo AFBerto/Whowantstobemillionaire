@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+SemiCondensed:wght@500&display=swap');
 
 * {
     margin: 0;
@@ -7,12 +7,12 @@
 }
 
 body {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Barlow SemiCondensed', sans-serif;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #2c5dc5; /* Color de respaldo */
+    background-color: #2c5dc5; /* Fallback color */
 }
 
 /* Pantalla inicial */
@@ -50,6 +50,19 @@ body {
 
 .play-button:hover {
     transform: scale(1.1);
+}
+
+.web-link {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500; /* Barlow SemiCondensed Medium */
+    color: #ffeb3b; /* Color amarillo que combina con el feedback */
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.web-link:hover {
+    color: #ffffff; /* Cambia a blanco al pasar el ratón */
 }
 
 /* Animación de parpadeo */
@@ -142,7 +155,7 @@ body {
 
 #question-text {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 500; /* Barlow SemiCondensed Medium */
     color: #fff;
     margin-bottom: 20px;
 }
@@ -159,7 +172,7 @@ body {
     border-radius: 5px;
     padding: 10px;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 500; /* Barlow SemiCondensed Medium */
     color: #2c5dc5;
     cursor: pointer;
     transition: background-color 0.2s;
@@ -202,7 +215,7 @@ body {
 
 #feedback {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 500; /* Barlow SemiCondensed Medium */
     color: #ffeb3b;
     margin-top: 20px;
 }
@@ -250,5 +263,10 @@ body {
 
     .logo-big {
         max-width: 36%; /* Reducido un 40% desde 60% (60 * 0.6) */
+    }
+
+    .web-link {
+        font-size: 16px;
+        margin-top: 15px;
     }
 }
