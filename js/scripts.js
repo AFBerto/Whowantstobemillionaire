@@ -58,6 +58,8 @@ function startGame() {
     // Ocultar pantalla inicial y mostrar pantalla principal
     document.getElementById('startScreen').style.display = 'none';
     document.getElementById('gameScreen').style.display = 'flex';
+    // Ocultar los destellos radial CODIGO AÑADIDO
+    document.querySelector('.radial-flare').style.display = 'none';
 
     // Registrar eventos para botones de opciones y comodines
     document.querySelectorAll('.option-button').forEach((button, index) => {
