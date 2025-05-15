@@ -32,17 +32,7 @@ body {
 .logo-big {
     max-width: 31.8%; /* Reducido un 40% desde 53% (53 * 0.6) */
     height: auto;
-    margin-bottom: 20px; /* Reducido para ajustar el espacio con la URL */
-}
-
-.website-url {
-    font-family: 'Arial', sans-serif; /* Tipografía por defecto */
-    font-weight: normal; /* Peso normal para Arial */
-    font-size: 18px; /* Tamaño ajustable */
-    color: #fff; /* Blanco para vis	decibilidad */
-    margin-bottom: 20px; /* 20 píxeles debajo del logo, antes del botón */
-    text-align: center;
-    line-height: 1.4; /* Controla la altura de línea */
+    margin-bottom: 30px;
 }
 
 .play-button {
@@ -260,9 +250,5 @@ body {
 
     .logo-big {
         max-width: 36%; /* Reducido un 40% desde 60% (60 * 0.6) */
-    }
-
-    .website-url {
-        font-size: 16px; /* Tamaño más pequeño para móviles */
     }
 }
