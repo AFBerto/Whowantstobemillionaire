@@ -52,6 +52,18 @@ body {
     transform: scale(1.1);
 }
 
+/* Estilos para el botón de la web */
+.web-button {
+    display: block;
+    margin-top: 20px; /* 20 píxeles debajo de jugar.png */
+    cursor: pointer;
+}
+
+.web-button img {
+    max-width: 200px; /* Ajusta según el tamaño de web.png */
+    height: auto;
+}
+
 /* Animación de parpadeo */
 @keyframes blink {
     0%, 100% {
@@ -250,5 +262,9 @@ body {
 
     .logo-big {
         max-width: 36%; /* Reducido un 40% desde 60% (60 * 0.6) */
+    }
+
+    .web-button img {
+        max-width: 150px; /* Tamaño más pequeño para móviles */
     }
 }
