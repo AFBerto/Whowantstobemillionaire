@@ -52,15 +52,15 @@ body {
     transform: scale(1.1);
 }
 
-/* Estilos para el enlace de la página web */
+/* Estilos para la URL de la página web */
 .website-url {
-    font-family: 'Barlow Semi Condensed', 'Arial', sans-serif; /* Fallback a Arial */
-    font-weight: 500; /* Medium */
+    font-family: 'Arial', sans-serif; /* Tipografía por defecto */
+    font-weight: normal; /* Peso normal para Arial */
     font-size: 18px; /* Tamaño ajustable */
-    color: #fff; /* Color blanco para visibilidad */
-    margin-top: 20px; /* 20 píxeles debajo del botón de jugar */
+    color: #fff; /* Blanco para visibilidad */
+    margin-top: 20px; /* 20 píxeles debajo de jugar.png */
     text-align: center;
-    line-height: 1.4; /* Controla la altura de línea para evitar desajustes */
+    line-height: 1.4; /* Controla la altura de línea */
 }
 
 /* Animación de parpadeo */
@@ -242,7 +242,7 @@ body {
         max-width: 100%;
     }
 
-    .question-text {
+    #-question-text {
         font-size: 20px;
     }
 
