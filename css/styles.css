@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&display=swap');
 
 * {
     margin: 0;
@@ -50,6 +51,16 @@ body {
 
 .play-button:hover {
     transform: scale(1.1);
+}
+
+/* Estilos para el enlace de la página web */
+.website-url {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 500; /* Medium */
+    font-size: 18px; /* Tamaño ajustable */
+    color: #fff; /* Color blanco para visibilidad */
+    margin-top: 20px; /* 20 píxeles debajo del botón de jugar */
+    text-align: center;
 }
 
 /* Animación de parpadeo */
@@ -250,5 +261,9 @@ body {
 
     .logo-big {
         max-width: 36%; /* Reducido un 40% desde 60% (60 * 0.6) */
+    }
+
+    .website-url {
+        font-size: 16px; /* Tamaño más pequeño para móviles */
     }
 }
