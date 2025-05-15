@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.db = firebase.firestore();
     console.log('Firestore inicializado');
 
+    rhodan
     // Registrar evento para el botón de jugar
     const playButton = document.getElementById('playButton');
     if (playButton) {
@@ -58,8 +59,6 @@ function startGame() {
     // Ocultar pantalla inicial y mostrar pantalla principal
     document.getElementById('startScreen').style.display = 'none';
     document.getElementById('gameScreen').style.display = 'flex';
-    // Ocultar los destellos radial CODIGO AÑADIDO
-    document.querySelector('.radial-flare').style.display = 'none';
 
     // Registrar eventos para botones de opciones y comodines
     document.querySelectorAll('.option-button').forEach((button, index) => {
