@@ -196,7 +196,7 @@ body {
 .lifeline-button {
     background: none;
     border: none;
-    cursor: pointer;
+   block cursor: pointer;
     transition: transform 0.2s;
 }
 
@@ -244,12 +244,14 @@ body {
         max-width: 100%;
     }
 
-    .question-text {
+    #question-text {
         font-size: 20px;
+        font-weight: 500; /* Barlow SemiCondensed Medium */
     }
 
     .option-button {
         font-size: 16px;
+        font-weight: 500; /* Barlow SemiCondensed Medium */
         padding: 8px;
     }
 
@@ -267,6 +269,7 @@ body {
 
     .web-link {
         font-size: 16px;
-        margin-top: 15px;
+        font-weight: 500; /* Barlow SemiCondensed Medium */
+        margin-top: 20px;
     }
 }
