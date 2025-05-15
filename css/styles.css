@@ -10,7 +10,6 @@ body {
     font-family: 'Nunito', sans-serif;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #2c5dc5; /* Fallback color */
@@ -51,25 +50,6 @@ body {
 
 .play-button:hover {
     transform: scale(1.1);
-}
-
-/* Enlace de la web */
-.website-link {
-    margin-top: 20px; /* 20 píxeles debajo de jugar.png */
-    margin-bottom: 0; /* Eliminar margen inferior por defecto */
-    text-align: center;
-}
-
-.website-link a {
-    color: #fff;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    text-decoration: none;
-}
-
-.website-link a:hover {
-    text-decoration: underline;
 }
 
 /* Animación de parpadeo */
@@ -270,9 +250,5 @@ body {
 
     .logo-big {
         max-width: 36%; /* Reducido un 40% desde 60% (60 * 0.6) */
-    }
-
-    .website-link a {
-        font-size: 16px; /* Tamaño más pequeño para móviles */
     }
 }
