@@ -30,7 +30,7 @@ body {
 }
 
 .logo-big {
-    max-width: 24%; /* Reducido un 55% desde 53% (53% * 0.45 ≈ 24%) */
+    max-width: 30%; /* Aumentado un 25% desde 24% (24% * 1.25 = 30%) */
     height: auto;
     margin-bottom: 30px;
 }
