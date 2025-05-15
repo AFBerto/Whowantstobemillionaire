@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
     window.db = firebase.firestore();
     console.log('Firestore inicializado');
 
-    rhodan
     // Registrar evento para el botón de jugar
     const playButton = document.getElementById('playButton');
     if (playButton) {
