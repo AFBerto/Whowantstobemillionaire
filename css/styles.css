@@ -27,7 +27,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative; /* Para posicionamiento absoluto de los destellos */
+    position: relative;
 }
 
 /* Destellos radiales */
@@ -38,9 +38,9 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 0; /* Debajo del logo y botón */
+    z-index: 0;
     overflow: hidden;
-    display: block; /* Visible inicialmente */
+    display: block;
 }
 
 .radial-flare::before,
@@ -58,7 +58,7 @@ body {
 }
 
 .radial-flare::after {
-    animation-delay: -3s; /* Desfase para un efecto más dinámico */
+    animation-delay: -3s;
 }
 
 /* Animación de rotación para los destellos */
@@ -77,11 +77,11 @@ body {
 }
 
 .logo-big {
-    max-width: 30%; /* Tamaño actual */
+    max-width: 30%;
     height: auto;
     margin-bottom: 30px;
     position: relative;
-    z-index: 1; /* Por encima de los destellos */
+    z-index: 1;
 }
 
 .play-button {
@@ -90,13 +90,13 @@ body {
     cursor: pointer;
     transition: transform 0.2s;
     position: relative;
-    z-index: 1; /* Por encima de los destellos */
+    z-index: 1;
 }
 
 .play-button img {
-    max-width: 400px; /* Tamaño grande para jugar.png */
+    max-width: 400px;
     height: auto;
-    animation: blink 1.5s ease-in-out infinite; /* Animación de parpadeo */
+    animation: blink 1.5s ease-in-out infinite;
 }
 
 .play-button:hover {
@@ -144,7 +144,7 @@ body {
 
 .progress-buttons {
     display: flex;
-    flex-direction: column-reverse; /* Ordena de abajo hacia arriba */
+    flex-direction: column; /* Cambiado de column-reverse a column para orden natural */
     align-items: center;
     gap: 10px;
 }
@@ -296,11 +296,11 @@ body {
     }
 
     .play-button img {
-        max-width: 300px; /* Ajustar tamaño en pantallas pequeñas */
+        max-width: 300px;
     }
 
     .logo-big {
-        max-width: 60%; /* Reducido a 2/3 de 90% (60%) */
+        max-width: 60%;
     }
 
     .radial-flare::before,
