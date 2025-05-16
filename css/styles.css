@@ -87,7 +87,6 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.3);
 }
 
 .logo {
@@ -100,11 +99,11 @@ body {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    gap: -10px;
+    gap: -30px;
 }
 
 .progress-button {
-    width: 360px;
+    width: 324px;
     height: auto;
     transition: transform 0.2s;
 }
@@ -268,7 +267,7 @@ body {
     }
 
     .progress-button {
-        width: 280px;
+        width: 252px;
     }
 
     .game-panel {
