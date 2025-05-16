@@ -33,7 +33,7 @@ body {
 }
 
 .logo-big {
-    max-width: 31.8%;
+    max-width: 22.3%;
     height: auto;
     margin-bottom: 30px;
 }
@@ -70,7 +70,7 @@ body {
 /* Pantalla principal */
 .container {
     display: flex;
-    weight: 100%;
+    width: 100%;
     min-width: 100vw;
     height: 100vh;
     background-image: url('../images/bg1.png');
@@ -85,11 +85,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px;
+    padding: 20px;
 }
 
 .logo {
-    max-width: 80%;
+    max-width: 56%;
     height: auto;
     margin-bottom: 20px;
 }
@@ -98,11 +98,11 @@ body {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 .progress-button {
-    width: 250px;
+    width: 180px;
     height: auto;
     transition: transform 0.2s;
 }
@@ -219,11 +219,11 @@ body {
 
     .progress-panel {
         flex: none;
-        padding: 20px;
+        padding: 10px;
     }
 
     .progress-button {
-        width: 200px;
+        width: 140px;
     }
 
     .game-panel {
@@ -235,7 +235,7 @@ body {
         max-width: 100%;
     }
 
-    .question-text {
+    #question-text {
         font-size: 20px;
     }
 
@@ -253,6 +253,6 @@ body {
     }
 
     .logo-big {
-        max-width: 36%;
+        max-width: 25.2%;
     }
 }
