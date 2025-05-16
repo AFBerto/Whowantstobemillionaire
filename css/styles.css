@@ -12,7 +12,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #2c5dc5; /* Fallback color */
+    background-color: #2c5dc5;
+    margin: 0;
+    padding: 0;
 }
 
 /* Pantalla inicial */
@@ -30,7 +32,7 @@ body {
 }
 
 .logo-big {
-    max-width: 31.8%; /* Reducido un 40% desde 53% (53 * 0.6) */
+    max-width: 31.8%;
     height: auto;
     margin-bottom: 30px;
 }
@@ -43,9 +45,9 @@ body {
 }
 
 .play-button img {
-    max-width: 400px; /* Tamaño grande para jugar.png */
+    max-width: 400px;
     height: auto;
-    animation: blink 1.5s ease-in-out infinite; /* Animación de parpadeo */
+    animation: blink 1.5s ease-in-out infinite;
 }
 
 .play-button:hover {
@@ -68,7 +70,7 @@ body {
 .container {
     display: flex;
     width: 100%;
-    max-width: 1200px;
+    min-width: 100vw;
     height: 100vh;
     background-image: url('../images/bg1.png');
     background-size: cover;
@@ -82,7 +84,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 40px;
 }
 
 .logo {
@@ -93,13 +95,13 @@ body {
 
 .progress-buttons {
     display: flex;
-    flex-direction: column-reverse; /* Ordena de abajo hacia arriba */
+    flex-direction: column-reverse;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .progress-button {
-    width: 100px;
+    width: 250px;
     height: auto;
     transition: transform 0.2s;
 }
@@ -211,15 +213,16 @@ body {
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
+        min-width: 100vw;
     }
 
     .progress-panel {
         flex: none;
-        padding: 10px;
+        padding: 20px;
     }
 
     .progress-button {
-        width: 80px;
+        width: 200px;
     }
 
     .game-panel {
@@ -245,10 +248,10 @@ body {
     }
 
     .play-button img {
-        max-width: 300px; /* Ajustar tamaño en pantallas pequeñas */
+        max-width: 300px;
     }
 
     .logo-big {
-        max-width: 36%; /* Reducido un 40% desde 60% (60 * 0.6) */
+        max-width: 36%;
     }
 }
