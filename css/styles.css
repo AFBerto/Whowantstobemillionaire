@@ -10,9 +10,6 @@ body {
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-weight: 500;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #260d61;
     margin: 0;
     padding: 0;
@@ -79,13 +76,18 @@ body {
     background-repeat: no-repeat;
 }
 
-/* Panel izquierdo: Progresión de premios */
+/* Panel izquierdo: Progresión de premios (fijo) */
 .progress-panel {
-    flex: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente para visibilidad */
 }
 
 .logo {
@@ -98,11 +100,11 @@ body {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    gap: 5px; /* Reducido de 10px a 5px */
+    gap: 5px;
 }
 
 .progress-button {
-    width: 360px; /* Duplicado de 180px a 360px */
+    width: 360px;
     height: auto;
     transition: transform 0.2s;
 }
@@ -111,7 +113,7 @@ body {
     transform: scale(1.1);
 }
 
-/* Panel derecho: Pregunta y comodines */
+/* Panel derecho: Juego */
 .game-panel {
     flex: 2;
     display: flex;
@@ -119,6 +121,34 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
+}
+
+.ready-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ready-image {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.start-game-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.start-game-button img {
+    max-width: 150px;
+    height: auto;
+}
+
+.start-game-button:hover {
+    transform: scale(1.1);
 }
 
 .question-container {
@@ -141,6 +171,12 @@ body {
     z-index: 2;
     padding: 20px;
     text-align: center;
+}
+
+#question-amount {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 #question-text {
@@ -203,6 +239,13 @@ body {
     opacity: 0.5;
 }
 
+#timer {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffeb3b;
+    margin-top: 20px;
+}
+
 #feedback {
     font-size: 20px;
     font-weight: 700;
@@ -218,12 +261,14 @@ body {
     }
 
     .progress-panel {
-        flex: none;
+        position: relative;
+        width: 100%;
+        height: auto;
         padding: 10px;
     }
 
     .progress-button {
-        width: 280px; /* Duplicado de 140px a 280px */
+        width: 280px;
     }
 
     .game-panel {
@@ -237,6 +282,10 @@ body {
 
     #question-text {
         font-size: 20px;
+    }
+
+    #question-amount {
+        max-width: 80px;
     }
 
     .option-button {
@@ -254,5 +303,17 @@ body {
 
     .logo-big {
         max-width: 25.2%;
+    }
+
+    .ready-image {
+        max-width: 150px;
+    }
+
+    .start-game-button img {
+        max-width: 100px;
+    }
+
+    #timer {
+        font-size: 20px;
     }
 }
