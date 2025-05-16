@@ -52,7 +52,7 @@ body {
     transform: scale(1.05);
 }
 
-/* Animación de parpadeo */
+/* Animación de parpadeo para jugar.png */
 @keyframes blink {
     0%, 100% {
         opacity: 1;
@@ -99,7 +99,7 @@ body {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    gap: -100px;
+    gap: -150px;
 }
 
 .progress-button {
@@ -144,10 +144,23 @@ body {
 .start-game-button img {
     max-width: 375px;
     height: auto;
+    animation: start-blink 1.5s ease-in-out infinite;
 }
 
 .start-game-button:hover {
     transform: scale(1.1);
+}
+
+/* Animación de parpadeo para inicio.png */
+@keyframes start-blink {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
 }
 
 .question-container {
