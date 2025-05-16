@@ -8,6 +8,8 @@
     <!-- Cargar Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <!-- Preload para bg.png -->
+    <link rel="preload" href="images/bg.png" as="image">
 </head>
 <body>
     <!-- Pantalla inicial -->
@@ -20,7 +22,7 @@
 
     <!-- Pantalla principal -->
     <div id="gameScreen" class="container" style="display: none;">
-        <!-- Panel izquierdo: Progresión de premios -->
+        <!-- Panel izquierdo: Progresión de premios (fijo) -->
         <div class="progress-panel">
             <img src="images/logo.png" alt="Logo" class="logo">
             <div class="progress-buttons">
@@ -28,11 +30,20 @@
             </div>
         </div>
 
-        <!-- Panel derecho: Pregunta y comodines -->
+        <!-- Panel derecho: Juego -->
         <div class="game-panel">
-            <div class="question-container">
+            <!-- Imagen ready.png y botón inicio.png -->
+            <div id="readyContainer" class="ready-container">
+                <img src="images/ready.png" alt="Ready" class="ready-image">
+                <button id="startGameButton" class="start-game-button">
+                    <img src="images/inicio.png" alt="Inicio">
+                </button>
+            </div>
+            <!-- Contenedor de la pregunta -->
+            <div id="questionContainer" class="question-container" style="display: none;">
                 <img src="images/card.png" alt="Fondo de pregunta" class="card-bg">
                 <div class="question-content">
+                    <img id="question-amount" src="images/500t.png" alt="Cantidad">
                     <div id="question-text">Esperando pregunta...</div>
                     <div class="options">
                         <button id="option-0" class="option-button">Opción A</button>
@@ -48,6 +59,7 @@
                             <img src="images/audience.png" alt="Público">
                         </button>
                     </div>
+                    <div id="timer">30</div>
                     <div id="feedback"></div>
                 </div>
             </div>
@@ -57,4 +69,3 @@
     <script src="js/scripts.js"></script>
 </body>
 </html>
-
