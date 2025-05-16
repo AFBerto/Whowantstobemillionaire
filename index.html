@@ -5,41 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quién Quiere Ser Millonario</title>
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Cargar Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-    <!-- Preload para bg.png -->
     <link rel="preload" href="images/bg.png" as="image">
 </head>
 <body>
-    <!-- Pantalla inicial -->
     <div id="startScreen" class="start-screen">
         <img src="images/logo.png" alt="Logo" class="logo-big">
         <button id="playButton" class="play-button">
             <img src="images/jugar.png" alt="Jugar">
         </button>
     </div>
-
-    <!-- Pantalla principal -->
     <div id="gameScreen" class="container" style="display: none;">
-        <!-- Panel izquierdo: Progresión de premios (fijo) -->
         <div class="progress-panel">
             <img src="images/logo.png" alt="Logo" class="logo">
-            <div class="progress-buttons">
-                <!-- Botones generados dinámicamente -->
-            </div>
+            <div class="progress-buttons"></div>
         </div>
-
-        <!-- Panel derecho: Juego -->
         <div class="game-panel">
-            <!-- Imagen ready.png y botón inicio.png -->
             <div id="readyContainer" class="ready-container">
                 <img src="images/ready.png" alt="Ready" class="ready-image">
                 <button id="startGameButton" class="start-game-button">
                     <img src="images/inicio.png" alt="Inicio">
                 </button>
             </div>
-            <!-- Contenedor de la pregunta -->
             <div id="questionContainer" class="question-container" style="display: none;">
                 <img src="images/card.png" alt="Fondo de pregunta" class="card-bg">
                 <div class="question-content">
@@ -63,9 +51,9 @@
                     <div id="feedback"></div>
                 </div>
             </div>
+            <img id="timeout" src="images/timeout.png" alt="Tiempo agotado" style="display: none;">
         </div>
     </div>
-
     <script src="js/scripts.js"></script>
 </body>
 </html>
