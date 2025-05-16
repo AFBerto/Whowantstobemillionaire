@@ -59,6 +59,18 @@ function startGame() {
     document.getElementById('startScreen').style.display = 'none';
     document.getElementById('gameScreen').style.display = 'flex';
 
+    // Generar botones de progreso
+    const progressButtonsContainer = document.querySelector('.progress-buttons');
+    progressButtonsContainer.innerHTML = ''; // Limpiar contenedor
+    levels.forEach(level => {
+        const img = document.createElement('img');
+        img.src = `images/${level}.png`;
+        img.id = `level-${level}`;
+        img.className = 'progress-button';
+        img.alt = `Nivel ${level}`;
+        progressButtonsContainer.appendChild(img);
+    });
+
     // Registrar eventos para botones de opciones y comodines
     document.querySelectorAll('.option-button').forEach((button, index) => {
         button.addEventListener('click', () => checkAnswer(index));
