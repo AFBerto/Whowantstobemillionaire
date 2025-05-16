@@ -100,7 +100,7 @@ body {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    gap: 5px;
+    gap: -10px;
 }
 
 .progress-button {
