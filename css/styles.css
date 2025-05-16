@@ -98,11 +98,11 @@ body {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    gap: 10px;
+    gap: 5px; /* Reducido de 10px a 5px */
 }
 
 .progress-button {
-    width: 180px;
+    width: 360px; /* Duplicado de 180px a 360px */
     height: auto;
     transition: transform 0.2s;
 }
@@ -223,7 +223,7 @@ body {
     }
 
     .progress-button {
-        width: 140px;
+        width: 280px; /* Duplicado de 140px a 280px */
     }
 
     .game-panel {
