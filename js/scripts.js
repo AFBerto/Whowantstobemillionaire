@@ -52,6 +52,7 @@ function startGame() {
     });
     document.getElementById('readyContainer').style.display = 'flex';
     document.getElementById('questionContainer').style.display = 'none';
+    document.getElementById('timeout').style.display = 'none';
     const startGameButton = document.getElementById('startGameButton');
     if (startGameButton) {
         startGameButton.addEventListener('click', startQuestion);
@@ -64,6 +65,7 @@ function startQuestion() {
     console.log('startQuestion ejecutado');
     document.getElementById('readyContainer').style.display = 'none';
     document.getElementById('questionContainer').style.display = 'block';
+    document.getElementById('timeout').style.display = 'none';
     document.querySelectorAll('.option-button').forEach((button, index) => {
         button.addEventListener('click', () => checkAnswer(index));
     });
@@ -85,8 +87,8 @@ function startTimer() {
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
             console.log('Tiempo agotado');
-            document.getElementById('feedback').innerHTML = '¡Tiempo agotado!';
-            document.getElementById('feedback').style.color = 'red';
+            document.getElementById('questionContainer').style.display = 'none';
+            document.getElementById('timeout').style.display = 'block';
             disableGame();
         }
     }, 1000);
@@ -141,6 +143,8 @@ function checkAnswer(selectedIndex) {
         feedback.innerHTML = 'Incorrecto. Juego terminado. Premio: ' + (currentLevel > 0 ? levels[currentLevel - 1] : '0');
         feedback.style.color = 'red';
         clearInterval(timerInterval);
+        document.getElementById('questionContainer').style.display = 'none';
+        document.getElementById('timeout').style.display = 'block';
         disableGame();
     }
 }
