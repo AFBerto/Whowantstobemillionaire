@@ -1,75 +1,33 @@
-<script type="text/javascript">
-        var gk_isXlsx = false;
-        var gk_xlsxFileLookup = {};
-        var gk_fileData = {};
-        function filledCell(cell) {
-          return cell !== '' && cell != null;
-        }
-        function loadFileData(filename) {
-        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
-            try {
-                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
-                var firstSheetName = workbook.SheetNames[0];
-                var worksheet = workbook.Sheets[firstSheetName];
-
-                // Convert sheet to JSON to filter blank rows
-                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
-                // Filter out blank rows (rows where all cells are empty, null, or undefined)
-                var filteredData = jsonData.filter(row => row.some(filledCell));
-
-                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
-                var headerRowIndex = filteredData.findIndex((row, index) =>
-                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
-                );
-                // Fallback
-                if (headerRowIndex === -1 || headerRowIndex > 25) {
-                  headerRowIndex = 0;
-                }
-
-                // Convert filtered JSON back to CSV
-                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
-                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
-                return csv;
-            } catch (e) {
-                console.error(e);
-                return "";
-            }
-        }
-        return gk_fileData[filename] || "";
-        }
-        </script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quién Quiere Ser Millonario - Física</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
-    <script src="scripts.js" defer></script>
+    <title>Quién Quiere Ser Millonario</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <link rel="preload" href="images/bg.png" as="image">
 </head>
 <body>
     <div id="startScreen" class="start-screen">
-        <img src="images/logobig.png" alt="Logo" class="logo-big">
+        <img src="images/logo.png" alt="Logo" class="logo-big">
         <button id="playButton" class="play-button">
             <img src="images/jugar.png" alt="Jugar">
         </button>
     </div>
-
     <div id="gameScreen" class="container" style="display: none;">
         <div class="progress-panel">
             <img src="images/logo.png" alt="Logo" class="logo">
             <div class="progress-buttons"></div>
         </div>
-
         <div class="game-panel">
-            <div id="readyContainer" class="ready-container" style="display: none;">
+            <div id="readyContainer" class="ready-container">
                 <img src="images/ready.png" alt="Ready" class="ready-image">
                 <button id="startGameButton" class="start-game-button">
-                    <img src="images/inicio.png" alt="Iniciar Juego">
+                    <img src="images/inicio.png" alt="Inicio">
                 </button>
             </div>
-
             <div id="questionContainer" class="question-container" style="display: none;">
                 <div class="question-content">
                     <img id="question-amount" src="images/500t.png" alt="Cantidad">
@@ -85,16 +43,16 @@
                             <img src="images/50-50.png" alt="50/50">
                         </button>
                         <button id="audience" class="lifeline-button">
-                            <img src="images/publico.png" alt="Público">
+                            <img src="images/audience.png" alt="Público">
                         </button>
                     </div>
                     <div id="timer">30</div>
                     <div id="feedback"></div>
                 </div>
             </div>
-
-            <img id="timeout" src="images/timeout.png" alt="Tiempo Agotado" style="display: none;">
+            <img id="timeout" src="images/timeout.png" alt="Tiempo agotado" style="display: none;">
         </div>
     </div>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
