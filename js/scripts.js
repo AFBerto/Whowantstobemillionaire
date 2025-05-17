@@ -29,29 +29,13 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error('Elemento #playButton no encontrado');
     }
-    adjustForScreenSize();
-    window.addEventListener('resize', adjustForScreenSize);
 });
-
-function adjustForScreenSize() {
-    document.body.classList.remove('small-screen', 'medium-screen', 'large-screen');
-    const width = window.innerWidth;
-    if (width <= 768) {
-        document.body.classList.add('small-screen');
-    } else if (width <= 1440) {
-        document.body.classList.add('medium-screen');
-    } else {
-        document.body`large-screen');
-    }
-}
-
 const levels = ['500', '1k', '2k', '5k', '10k', '20k', '50k', '75k', '150k', '250k', '500k', '1M'];
 let currentLevel = 0;
 let currentQuestion = null;
 let fiftyFiftyUsed = false;
 let audienceUsed = false;
 let timerInterval = null;
-
 function startGame() {
     console.log('startGame ejecutado');
     document.getElementById('startScreen').style.display = 'none';
@@ -77,7 +61,6 @@ function startGame() {
         console.error('Elemento #startGameButton no encontrado');
     }
 }
-
 function startQuestion() {
     console.log('startQuestion ejecutado');
     document.getElementById('readyContainer').style.display = 'none';
@@ -91,7 +74,6 @@ function startQuestion() {
     startTimer();
     loadQuestion();
 }
-
 function startTimer() {
     let timeLeft = 30;
     const timerElement = document.getElementById('timer');
@@ -111,7 +93,6 @@ function startTimer() {
         }
     }, 1000);
 }
-
 async function loadQuestion() {
     console.log('loadQuestion ejecutado para nivel: ' + levels[currentLevel]);
     try {
@@ -141,7 +122,6 @@ async function loadQuestion() {
         document.getElementById('question-text').innerHTML = 'Error al cargar la pregunta.';
     }
 }
-
 function checkAnswer(selectedIndex) {
     console.log('checkAnswer ejecutado con opción: ' + selectedIndex);
     const feedback = document.getElementById('feedback');
@@ -168,7 +148,6 @@ function checkAnswer(selectedIndex) {
         disableGame();
     }
 }
-
 function useFiftyFifty() {
     if (fiftyFiftyUsed) {
         console.log('Comodín 50/50 ya usado');
@@ -185,7 +164,6 @@ function useFiftyFifty() {
     });
     console.log('Comodín 50/50 usado');
 }
-
 function useAudience() {
     if (audienceUsed) {
         console.log('Comodín del público ya usado');
@@ -202,7 +180,6 @@ function useAudience() {
     document.getElementById('feedback').innerHTML = `Votos del público: A: ${votes[0]}%, B: ${votes[1]}%, C: ${votes[2]}%, D: ${votes[3]}%`;
     console.log('Comodín del público usado');
 }
-
 function disableGame() {
     document.querySelectorAll('.option-button').forEach(button => {
         button.disabled = true;
